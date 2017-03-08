@@ -119,6 +119,8 @@ class ThumbnailAspect {
 					$useGlobalBinary = TRUE;
 				}
 				break;
+			default:
+				return;
 		}
 		$binaryPath = $useGlobalBinary === TRUE ? $this->settings['globalBinaryPath'] . $library : $this->packageManager->getPackageOfObject($this)->getResourcesPath() . $binaryRootPath . $binaryPath;
 		$cmd = escapeshellcmd($binaryPath) . ' ' . $arguments;
