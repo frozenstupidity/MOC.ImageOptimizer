@@ -92,7 +92,7 @@ class ThumbnailAspect {
 				}
 				$library = 'optipng';
 				$binaryPath = sprintf('%1$s-bin/vendor/%s', $library);
-				$arguments = sprintf('-o%u -strip all -out %s %s', $this->settings['formats']['png']['optimizationLevel'], $file, $file);
+				$arguments = sprintf('-quiet -o%u -strip all -out %s %s', $this->settings['formats']['png']['optimizationLevel'], $file, $file);
 				if ($this->settings['formats']['png']['useGlobalBinary'] === TRUE) {
 					$useGlobalBinary = TRUE;
 				}
